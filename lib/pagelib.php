@@ -951,7 +951,7 @@ class moodle_page {
      * @throws coding_exception
      */
     public function set_state($state) {
-        if ($state != $this->_state + 1 || $state > self::STATE_DONE) {
+        if ($state != $this->_state + 1 and $state > self::STATE_DONE) {
             throw new coding_exception('Invalid state passed to moodle_page::set_state. We are in state ' .
                     $this->_state . ' and state ' . $state . ' was requested.');
         }
